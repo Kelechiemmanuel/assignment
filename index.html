@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+        *{
+            font-family: roboto;
+        }
+        .home{
+            margin-top: 7px;
+            background-image: url(hero.webp);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+        }
+        .section-con{
+            margin-top: 61px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            right: 0;
+            background-color: white;
+            align-items: center;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        .logo-img{
+            width: 50px;
+            margin-right: 100px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+            margin-right: 30px;
+            font-size: 12px;
+            color: white;
+            list-style: none;
+        }
+        .home-con{
+            background-color: rgba(211, 211, 211, 0.897);
+            padding: 40px 10px;
+            margin: auto;
+            text-align: center;
+            border-radius: 20px;
+            height: 100%;
+        }
+        .office{
+            width: 40%;
+            margin-top: 30px;
+        }
+        .chair-con{
+            margin-top: -40px;
+            margin-bottom: 10px;
+        }
+        
+        .title{
+            font-weight: 900;
+            margin-bottom: 0px;
+            font-size: 40px;
+        }
+        .menu{
+            margin-right: 50px;
+        }
+        .get-started{
+            width: 100px;
+            height: 25px;
+            font-size: 12px;
+            margin-right: 40px;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .btn-sec{
+            width: 150px;
+            height: 40px;
+            color: white;
+            border: none;
+            font-size: 12px;
+            border-radius: 20px;
+            background-color: rgb(37, 107, 37);
+        }
+        .final{
+            width: 35%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            height: 30px;
+            background-color: white;
+        }
+        label{
+            font-size: 10px;
+        }
+        .btn3{
+            font-size: 8px;
+            margin-left: 10px;
+        }
+        .btn-last{
+            width: 25%;
+            height: 25px;
+            margin-left: 50px;
+            border: none;
+            margin-right: 2px;
+            border-radius: 5px;
+            color: white;
+            background-color: gray;
+        }
+        .discribe{
+            font-size: 10px;
+        }
+        @media screen and (max-width: 650px) {
+            nav{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .nav-items{
+                display: none;
+            }
+            .btn-pri{
+                display: none;
+            }
+            .logo-img{
+                margin-left: 40px;
+            }
+            .menu{
+                margin-right: 50px;
+            }
+            .title{
+                font-size: 30px;
+            }
+            .final{
+                display: flex;
+                width: 200px;
+                height: 10vh;
+                padding: 8px 8px 8px 8px;
+                flex-direction: column;
+            }
+            .btn-last{
+                  width: 100px;
+                  margin-right: 50px;
+            }
+            .office{
+                margin-top: 100px;
+                width: 290px;
+            }
+            .btn-sec{
+                margin-top: 30px;
+            }
+            .home{
+                height: 100%;
+            }
+            .home-con{
+                height: 100%;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .nav-items{
+                display: none;
+            }
+            .btn-pri{
+                display: none;
+            }
+            .logo-img{
+                margin-left: 40px;
+            }
+            .menu{
+                margin-right: 50px;
+            }
+            .title{
+                font-size: 30px;
+            }
+            .final{
+                display: flex;
+                width: 200px;
+                height: 10vh;
+                padding: 8px 8px 8px 8px;
+                flex-direction: column;
+            }
+            .btn-last{
+                  width: 100px;
+                  margin-right: 50px;
+            }
+            .office{
+                margin-top: 100px;
+                width: 290px;
+            }
+            .btn-sec{
+                margin-top: 30px;
+            }
+            .home{
+                height: 100%;
+            }
+            .home-con{
+                height: 100%;
+            }
+        }
+        .box-con{
+            height: 100%;
+            width: 0%;
+            top: 9.5%;
+            position: fixed;
+            z-index: 1;
+            background-color: black;
+            transition: 0.5s;
+            overflow: hidden;
+
+        }
+        .box{
+            position: relative;
+            width: 100%;
+            text-align: left;
+            top: 15%;
+            margin-top: 30px;
+        }
+        .mobile{
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            background-color: white;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            right: 0;
+            align-items: center;
+        }
+        .span{
+            margin-right: 60px;
+        }
+        .box a{
+            display: block;
+            text-decoration: none;
+            padding: 8px;
+            color: gray;
+        }
+        .closebtn{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: grey;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+        }
+  
+      
+    </style>
+</head>
+<body>
+    <div class="box-con" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="box">
+        <li class="nav-link">
+            <a href="#">Feature</a>
+        </li>
+        <li class="nav-link">
+            <a href="#">How to use</a>
+        </li>
+        <li class="nav-link">
+            <a href="#">Licences</a>
+        </li>
+        <li class="nav-link">
+            <a href="#">Pricing</a>
+        </li>
+    </div>
+</div>
+    <div class="mobile">
+        <img class="logo-img" src="logo.png" alt="">
+        <span class="span" onclick="openNav()">&#9776;</span>
+    </div>
+    <section class="section-con">
+    <div class="home-all">
+        <nav class="nav-list">
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="#">Feature</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">How to use</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Licences</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">Pricing</a>
+                </li>
+            </ul>
+            <div class="logo-con">
+                <img class="logo-img" src="logo.png" alt="">
+            </div>
+            <div class="btn-pri">
+                <button class="get-started">Get-started</button>
+            </div>
+        </nav>
+        <div class="home">
+            <div class="home-con">
+                <h1 class="title">Dream Bigger</h1>
+                <p class="discribe">Start your free trial today. No credit card needed</p>
+                <button class="btn-sec">Join the working lists</button>
+                <div class="chair-con">
+                    <img class="office" src="china-removebg-preview.png" alt="">
+                    <!-- <img class="office" src="home-office.png" alt=""> -->
+                </div>
+                <div class="final">
+                    <i class="fa-solid fa-star btn3"></i> 
+                 <label for="">minimalist mockup template<button class="btn-last">Generate</button></label>  
+                </div> 
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        function openNav(){
+            document.getElementById('myNav').style.width = '40%';
+        }
+        function closeNav(){
+            document.getElementById('myNav').style.width = '0';
+        }
+    </script>
+</body>
+</html>
